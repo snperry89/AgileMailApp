@@ -62,6 +62,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Rockwood.Data\Rockwood.Data.csproj">
+      <Project>{3792827D-FF33-4E55-A3FA-7AB461686E42}</Project>
+      <Name>Rockwood.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Rockwood.Models\Rockwood.Models.csproj">
       <Project>{92D2CCE7-813D-47C3-B91B-54D952DCA718}</Project>
       <Name>Rockwood.Models</Name>
