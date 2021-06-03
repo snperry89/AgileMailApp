@@ -31,5 +31,7 @@ namespace Rockwood.Data
         }
 
         // This is where DbSets go
+
+        //This is a note 
     }
 }
