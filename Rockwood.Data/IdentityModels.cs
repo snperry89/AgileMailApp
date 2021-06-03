@@ -29,5 +29,7 @@ namespace Rockwood.Data
         {
             return new ApplicationDbContext();
         }
+
+        // This is where DbSets go
     }
 }
