@@ -51,6 +51,25 @@ namespace Rockwood.Services
             }
         }
 
+        public UserDetail GetUserById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                User entity =
+                    ctx
+                    .Users
+                    .SingleOrDefault(e => e.UserId == id && e.OwnerId == _userId);
+                return
+                    new UserDetail
+                    {
+                        UserId = entity.UserId,
+                        EmailAddress = entity.EmailAddress,
+                        FirstName = entity.FirstName,
+                        LastName = entity.LastName
+                    };
+            }
+        }
+
 
     }
 }

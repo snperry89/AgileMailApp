@@ -10,6 +10,10 @@ using System.Web.Http;
 
 namespace Rockwood_Tech_Development.Controllers
 {
+    /// <summary>
+    /// why authorize?
+    /// </summary>
+    [Authorize]
     public class UserController : ApiController
     {
 
@@ -38,6 +42,13 @@ namespace Rockwood_Tech_Development.Controllers
             UserService userService = CreateUserService();
             var users = userService.GetUsers();
             return Ok(users);
+        }
+
+        public IHttpActionResult Get(int id)
+        {
+            UserService userService = CreateUserService();
+            var user = userService.GetUserById(id);
+            return Ok(user);
         }
     }
 }
