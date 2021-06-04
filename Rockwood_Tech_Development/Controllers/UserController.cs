@@ -14,6 +14,7 @@ namespace Rockwood_Tech_Development.Controllers
     /// why authorize?
     /// </summary>
     [Authorize]
+
     public class UserController : ApiController
     {
 

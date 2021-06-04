@@ -32,8 +32,8 @@ namespace Rockwood.Data
         {
             return new ApplicationDbContext();
         }
-
-        public DbSet<User> Users { get; set; }
+        // added new below
+        public DbSet<User> Anything { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -46,10 +46,6 @@ namespace Rockwood.Data
                 .Add(new IdentityUserLoginConfiguration())
                 .Add(new IdentityUserRoleConfiguration());
         }
-
-        // This is where DbSets go
-
-        //This is a note 
     }
     public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
     {

@@ -24,7 +24,7 @@ namespace Rockwood.Services
             };
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Users.Add(entity);
+                ctx.Anything.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
@@ -35,7 +35,7 @@ namespace Rockwood.Services
             {
                 var query =
                     ctx
-                    .Users
+                    .Anything
                     .Where(e => e.OwnerId == _userId)
                     .Select(
                         e =>
@@ -55,9 +55,9 @@ namespace Rockwood.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                User entity =
+                var entity =
                     ctx
-                    .Users
+                    .Anything
                     .SingleOrDefault(e => e.UserId == id && e.OwnerId == _userId);
                 return
                     new UserDetail
