@@ -4,8 +4,9 @@
 
 ## Technology Used
 * [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/)
+* * [Trello](https://trello.com/b/aApWmt1F/agile-workflow) (Link to our Trello Board)
 * C#
 * GitHub
-* [Trello](https://trello.com/b/aApWmt1F/agile-workflow)
+
 
 
