@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Rockwood.Models
 {
-    public class CreateDepartment
+    public class DepartmentCreate
     {
         [Required]
         [MinLength(1, ErrorMessage ="Please enter at least one character")]

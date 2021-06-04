@@ -10,22 +10,40 @@ namespace Rockwood.Services
 {
     public class DepartmentService
     {
-        public bool CreateNote(CreateDepartment model)
+
+        public bool CreateNote(DepartmentCreate model)
         {
             var entity =
-                new Note()
+                new Department()
                 {
-                    OwnerId = _userId,
-                    Title = model.Title,
-                    Content = model.Content,
-                    CreatedUtc = DateTimeOffset.Now
+                    DepartmentTitle = model.DepartmentTitle,                   
                 };
 
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Notes.Add(entity);
+                ctx.Departments.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
+
+        public IEnumerable<DepartmentListItem> GetDepartments()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Departments  
+                        .Select(
+                            e =>
+                                new DepartmentListItem
+                                {
+                                    DepartmentId = e.DepartmentId,
+                                    DepartmentTitle = e.DepartmentTitle
+                                }
+                         );
+                return query.ToArray();
+            }
+        }
     }
+        
 }
