@@ -18,6 +18,8 @@ namespace Rockwood.Services
         {
             var entity = new User()
             {
+                //Added below line
+                OwnerId = _userId,
                 EmailAddress = model.EmailAddress,
                 FirstName = model.FirstName,
                 LastName = model.LastName
