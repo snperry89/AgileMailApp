@@ -33,7 +33,8 @@ namespace Rockwood.Data
             return new ApplicationDbContext();
         }
 
-        public DbSet<User> Users { get; set; }
+        public DbSet<Department> Departments { get; set; }
+        //public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
