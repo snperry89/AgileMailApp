@@ -32,6 +32,7 @@ namespace Rockwood.Data
         {
             return new ApplicationDbContext();
         }
+        public DbSet<Email> Emails { get; set; }
 
         public DbSet<User> Users { get; set; }
 
