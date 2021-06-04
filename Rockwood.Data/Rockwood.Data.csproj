@@ -84,13 +84,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Email.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\202106032336450_Initial.cs" />
+    <Compile Include="Migrations\202106032336450_Initial.Designer.cs">
+      <DependentUpon>202106032336450_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106032352135_EmailAdded.cs" />
+    <Compile Include="Migrations\202106032352135_EmailAdded.Designer.cs">
+      <DependentUpon>202106032352135_EmailAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202106032336450_Initial.resx">
+      <DependentUpon>202106032336450_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106032352135_EmailAdded.resx">
+      <DependentUpon>202106032352135_EmailAdded.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
